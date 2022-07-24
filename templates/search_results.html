@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+<p>Giant Bomb gives me a 403 when I try to search through this app.
+    The identical URL that I'm using here for the search works fine when pasted into a browser's address bar.</p>
+<table border="1">
+        {% for result in search_results %}
+
+        <a href="#">
+            <tr>
+               <td> {{ result['image']['icon_url'] }} </td>
+               <td> {{ result['name'] }} </td>
+            </tr>
+        </a>
+        <hr>
+    {% endfor %}
+
+</table>
